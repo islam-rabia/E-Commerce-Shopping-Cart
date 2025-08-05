@@ -1,9 +1,12 @@
+import { eventAddToCart } from "./event-addToCart.js";
+
 async function fetchDataDashes() {
   let req = await fetch("https://api.jsonbin.io/v3/b/685196d38a456b7966afc4c8");
   let res = await req.json();
   let products = res.record.dishesList;
 
   handleDataDashes(products);
+  eventAddToCart(products);
 }
 
 let app = document.querySelector(".dishes-list");
@@ -28,7 +31,6 @@ function handleDataDashes(products) {
             </div>
           </figure>
 
-
           <div class="dishes-info">
             <div class="dishes-title">
               <a href="#">
@@ -38,7 +40,7 @@ function handleDataDashes(products) {
             </div>
             <p>${description}</p>
             <div class="card">
-              <button class="add-to-cart" title="add to cart">
+              <button class="add-to-cart" title="add to cart" data-id="${id}">
                 Add To Cart
               </button>
               <span>$${price}</span>
