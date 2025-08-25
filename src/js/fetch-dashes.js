@@ -1,4 +1,4 @@
-import { eventAddToCart } from "./event-addToCart.js";
+import { saveProductInLocalStorage } from "./saveProductInLocalStorage.js";
 
 let wishlist;
 async function fetchDataDashes() {
@@ -20,7 +20,6 @@ function handleDataDashes(products) {
       <li>
           <figure class="relative">
             <img src="${img}" alt="" />
-
             <div class="increment-decrement">
               <button title="increment" class="btn-increment">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus-icon lucide-plus"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
@@ -31,7 +30,6 @@ function handleDataDashes(products) {
               </button>
             </div>
           </figure>
-
           <div class="dishes-info">
             <div class="dishes-title">
               <a href="#">
@@ -52,7 +50,17 @@ function handleDataDashes(products) {
     })
     .join("");
 
-  eventAddToCart(wishlist);
+  let element = document.querySelector(".dishes-list");
+
+  element.addEventListener("click", (event) => {
+    let btn = event.target.closest(".add-to-cart");
+    if (btn) {
+      let productId = +btn.getAttribute("data-id");
+      // condition ? true : false
+      let product = wishlist.find((ele) => ele.id === productId);
+      saveProductInLocalStorage(product);
+    }
+  });
 }
 
 export { fetchDataDashes };
