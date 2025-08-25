@@ -469,16 +469,16 @@ header {
 @media (min-width: 1200px) {
   header {
     .header-info {
-      padding-inline: 80px;
+      padding-inline: 100px;
     }
 
     .header-navbar {
-      padding-inline: 80px;
+      padding-inline: 100px;
     }
   }
 
   #dishes {
-    padding-inline: 80px;
+    padding-inline: 100px;
 
     .dishes-list {
       grid-template-columns: repeat(4, 1fr);

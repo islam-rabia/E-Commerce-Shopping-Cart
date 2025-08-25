@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="src/css/style.css" />
+    <link rel="stylesheet" href="src/css/shopping-cart.css" />
     <title>Tomato App</title>
   </head>
   <body>
@@ -16,7 +17,7 @@
           </a>
 
           <div class="cart-icon">
-            <a href="/shopping-cart.html" title="my cart">
+            <a href="#" title="my cart">
               <i data-lucide="shopping-cart"></i>
             </a>
             <div class="count-cart">
@@ -62,17 +63,50 @@
       <hr />
     </header>
 
-    <section id="dishes">
-      <h1>Top dishes near you</h1>
+    <main>
+      <section id="shopping-cart">
+        <h1># Welcome shopping cart</h1>
+        <div class="cart-details">
+          <h3>My Cart <span class="products-length">(0)</span></h3>
+        </div>
+        <ul class="cart-list"></ul>
+      </section>
 
-      <ul class="dishes-list"></ul>
-    </section>
+      <section id="order-summary">
+        <h2>Order Summary</h2>
+        <ul class="order-list">
+          <li class="subtotal">
+            <h3>Subtotal</h3>
+            <p>$00.0</p>
+          </li>
+
+          <li class="discount">
+            <h3>Discounts</h3>
+            <p>$00.0</p>
+          </li>
+
+          <li class="delivery-free">
+            <h3>Delivery Free</h3>
+            <p>$00.0</p>
+          </li>
+
+          <li class="checkout-total">
+            <div class="total">
+              <h3>Total</h3>
+              <p>$00.0</p>
+            </div>
+            <button type="button" title="checkout">Secure Checkout</button>
+            <p>Gift cards and promo codes are applied in at checkout.</p>
+          </li>
+        </ul>
+      </section>
+    </main>
 
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <script>
       lucide.createIcons();
     </script>
-    <script type="module" src="src/js/main.js"></script>
+    <script type="module" src="src/js/shopping-cart.js"></script>
   </body>
 </html>

@@ -7,6 +7,7 @@
       "img": "./image/food_1.png",
       "description": "food provides essential nutrients for over all health and well-being",
       "price": 12,
+      "category": "Salad",
       "quantity": 0
     },
     {
@@ -16,6 +17,7 @@
       "img": "./image/food_2.png",
       "description": "food provides essential nutrients for over all health and well-being",
       "price": 18,
+      "category": "Salad",
       "quantity": 0
     },
     {
@@ -25,6 +27,7 @@
       "img": "./image/food_3.png",
       "description": "food provides essential nutrients for over all health and well-being",
       "price": 16,
+      "category": "Salad",
       "quantity": 0
     },
     {
@@ -34,6 +37,7 @@
       "img": "./image/food_4.png",
       "description": "food provides essential nutrients for over all health and well-being",
       "price": 24,
+      "category": "Salad",
       "quantity": 0
     },
     {
@@ -43,6 +47,7 @@
       "img": "./image/food_5.png",
       "description": "food provides essential nutrients for over all health and well-being",
       "price": 14,
+      "category": "Rolls",
       "quantity": 0
     },
     {
@@ -52,6 +57,7 @@
       "img": "./image/food_6.png",
       "description": "food provides essential nutrients for over all health and well-being",
       "price": 12,
+      "category": "Rolls",
       "quantity": 0
     },
     {
@@ -61,6 +67,7 @@
       "img": "./image/food_7.png",
       "description": "food provides essential nutrients for over all health and well-being",
       "price": 20,
+      "category": "Rolls",
       "quantity": 0
     },
     {
@@ -70,6 +77,7 @@
       "img": "./image/food_8.png",
       "description": "food provides essential nutrients for over all health and well-being",
       "price": 15,
+      "category": "Rolls",
       "quantity": 0
     },
     {
@@ -79,6 +87,7 @@
       "img": "./image/food_9.png",
       "description": "food provides essential nutrients for over all health and well-being",
       "price": 14,
+      "category": "Deserts",
       "quantity": 0
     },
     {
@@ -88,6 +97,7 @@
       "img": "./image/food_10.png",
       "description": "food provides essential nutrients for over all health and well-being",
       "price": 22,
+      "category": "Deserts",
       "quantity": 0
     },
     {
@@ -97,6 +107,7 @@
       "img": "./image/food_11.png",
       "description": "food provides essential nutrients for over all health and well-being",
       "price": 10,
+      "category": "Deserts",
       "quantity": 0
     },
     {
@@ -106,6 +117,7 @@
       "img": "./image/food_12.png",
       "description": "food provides essential nutrients for over all health and well-being",
       "price": 12,
+      "category": "Deserts",
       "quantity": 0
     },
     {
@@ -115,6 +127,7 @@
       "img": "./image/food_13.png",
       "description": "food provides essential nutrients for over all health and well-being",
       "price": 12,
+      "category": "Sandwich",
       "quantity": 0
     },
     {
@@ -124,6 +137,7 @@
       "img": "./image/food_14.png",
       "description": "food provides essential nutrients for over all health and well-being",
       "price": 18,
+      "category": "Sandwich",
       "quantity": 0
     },
     {
@@ -133,6 +147,7 @@
       "img": "./image/food_15.png",
       "description": "food provides essential nutrients for over all health and well-being",
       "price": 16,
+      "category": "Sandwich",
       "quantity": 0
     },
     {
@@ -142,6 +157,7 @@
       "img": "./image/food_16.png",
       "description": "food provides essential nutrients for over all health and well-being",
       "price": 24,
+      "category": "Sandwich",
       "quantity": 0
     },
     {
@@ -151,6 +167,7 @@
       "img": "./image/food_17.png",
       "description": "food provides essential nutrients for over all health and well-being",
       "price": 14,
+      "category": "Cake",
       "quantity": 0
     },
     {
@@ -160,6 +177,7 @@
       "img": "./image/food_18.png",
       "description": "food provides essential nutrients for over all health and well-being",
       "price": 12,
+      "category": "Cake",
       "quantity": 0
     },
     {
@@ -169,6 +187,7 @@
       "img": "./image/food_19.png",
       "description": "food provides essential nutrients for over all health and well-being",
       "price": 20,
+      "category": "Cake",
       "quantity": 0
     },
     {
@@ -178,6 +197,7 @@
       "img": "./image/food_20.png",
       "description": "food provides essential nutrients for over all health and well-being",
       "price": 15,
+      "category": "Cake",
       "quantity": 0
     },
     {
@@ -187,6 +207,7 @@
       "img": "./image/food_21.png",
       "description": "food provides essential nutrients for over all health and well-being",
       "price": 14,
+      "category": "PureVeg",
       "quantity": 0
     },
     {
@@ -196,6 +217,7 @@
       "img": "./image/food_22.png",
       "description": "food provides essential nutrients for over all health and well-being",
       "price": 22,
+      "category": "PureVeg",
       "quantity": 0
     },
     {
@@ -205,6 +227,7 @@
       "img": "./image/food_23.png",
       "description": "food provides essential nutrients for over all health and well-being",
       "price": 10,
+      "category": "PureVeg",
       "quantity": 0
     },
     {
@@ -214,6 +237,7 @@
       "img": "./image/food_24.png",
       "description": "food provides essential nutrients for over all health and well-being",
       "price": 12,
+      "category": "PureVeg",
       "quantity": 0
     },
     {
@@ -223,6 +247,7 @@
       "img": "./image/food_25.png",
       "description": "food provides essential nutrients for over all health and well-being",
       "price": 12,
+      "category": "Pasta",
       "quantity": 0
     },
     {
@@ -232,6 +257,7 @@
       "img": "./image/food_26.png",
       "description": "food provides essential nutrients for over all health and well-being",
       "price": 18,
+      "category": "Pasta",
       "quantity": 0
     },
     {
@@ -241,6 +267,7 @@
       "img": "./image/food_27.png",
       "description": "food provides essential nutrients for over all health and well-being",
       "price": 16,
+      "category": "Pasta",
       "quantity": 0
     },
     {
@@ -250,6 +277,7 @@
       "img": "./image/food_28.png",
       "description": "food provides essential nutrients for over all health and well-being",
       "price": 24,
+      "category": "Pasta",
       "quantity": 0
     },
     {
@@ -259,6 +287,7 @@
       "img": "./image/food_29.png",
       "description": "food provides essential nutrients for over all health and well-being",
       "price": 14,
+      "category": "Noodles",
       "quantity": 0
     },
     {
@@ -268,6 +297,7 @@
       "img": "./image/food_30.png",
       "description": "food provides essential nutrients for over all health and well-being",
       "price": 12,
+      "category": "Noodles",
       "quantity": 0
     },
     {
@@ -277,6 +307,7 @@
       "img": "./image/food_31.png",
       "description": "food provides essential nutrients for over all health and well-being",
       "price": 20,
+      "category": "Noodles",
       "quantity": 0
     },
     {
@@ -286,6 +317,7 @@
       "img": "./image/food_32.png",
       "description": "food provides essential nutrients for over all health and well-being",
       "price": 14,
+      "category": "Noodles",
       "quantity": 0
     }
   ]
