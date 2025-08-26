@@ -1,3 +1,4 @@
+import { cartManagement } from "./cart-management.js";
 import { saveProductInLocalStorage } from "./saveProductInLocalStorage.js";
 
 let wishlist;
@@ -59,6 +60,7 @@ function handleDataDashes(products) {
       // condition ? true : false
       let product = wishlist.find((ele) => ele.id === productId);
       saveProductInLocalStorage(product);
+      cartManagement(product, productId);
     }
   });
 }
