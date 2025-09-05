@@ -1,3 +1,7 @@
+import { changeQuantity } from "./change-quantity.js";
+import { increment } from "./increment.js";
+import { decrement } from "./decrement.js";
+
 function handleProductsInShoppingCart() {
   let products = JSON.parse(localStorage.getItem("products"));
 
@@ -26,7 +30,7 @@ function mapProducts(products) {
             <p>Category: Salad</p>
           </div>
           <div class="increment-decrement">
-            <button title="increment" class="btn-increment">
+            <button title="increment" class="btn-increment" data-id="${id}">
               <svg
                 xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus-icon lucide-plus"
               >
@@ -34,8 +38,8 @@ function mapProducts(products) {
                 <path d="M12 5v14" />
               </svg>
             </button>
-            <p class="quantity">0</p>
-            <button title="decrement" class="btn-decrement">
+            <p id="quantity" class="quantity-${id}" data-id="${id}">0</p>
+            <button title="decrement" class="btn-decrement" data-id="${id}">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-minus-icon lucide-minus">
                 <path d="M5 12h14" />
               </svg>
@@ -51,6 +55,30 @@ function mapProducts(products) {
     `;
     })
     .join("");
+
+  let btnsIncrement = document.querySelectorAll(".btn-increment");
+  btnsIncrement.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      let productId = +btn.getAttribute("data-id");
+      increment(productId);
+      changeQuantity(productId);
+    });
+  });
+
+  let btnsDecrement = document.querySelectorAll(".btn-decrement");
+  btnsDecrement.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      let productId = +btn.getAttribute("data-id");
+      decrement(productId);
+      changeQuantity(productId);
+    });
+  });
+
+  let paragraphs = document.querySelectorAll("#quantity");
+  paragraphs.forEach((ele) => {
+    let productId = +ele.getAttribute("data-id");
+    changeQuantity(productId);
+  });
 }
 
 export { handleProductsInShoppingCart };
