@@ -3,7 +3,7 @@ import { increment } from "./increment.js";
 import { decrement } from "./decrement.js";
 
 function handleProductsInShoppingCart() {
-  let products = JSON.parse(localStorage.getItem("products"));
+  let products = JSON.parse(localStorage.getItem("products")) || [];
 
   mapProducts(products);
 }
