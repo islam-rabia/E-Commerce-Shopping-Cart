@@ -1,3 +1,4 @@
+import { cartCount } from "./cart-count.js";
 import { cartManagement } from "./cart-management.js";
 import { changeQuantity } from "./change-quantity.js";
 import { decrement } from "./decrement.js";
@@ -12,6 +13,7 @@ async function fetchDataDashes() {
   wishlist = products;
 
   handleDataDashes(products);
+  cartCount();
 }
 
 let app = document.querySelector(".dishes-list");
@@ -65,6 +67,7 @@ function handleDataDashes(products) {
       saveProductInLocalStorage(product);
       cartManagement(product, productId);
       changeQuantity(productId);
+      cartCount();
     }
   });
 

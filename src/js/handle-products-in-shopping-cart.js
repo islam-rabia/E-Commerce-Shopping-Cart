@@ -1,17 +1,20 @@
 import { changeQuantity } from "./change-quantity.js";
 import { increment } from "./increment.js";
 import { decrement } from "./decrement.js";
+import { removeProduct } from "./remove-product.js";
+import { cartCount } from "./cart-count.js";
 
 function handleProductsInShoppingCart() {
   let products = JSON.parse(localStorage.getItem("products")) || [];
 
   mapProducts(products);
+  cartCount();
 }
 
 let app = document.querySelector(".cart-list");
 function mapProducts(products) {
   app.innerHTML = products
-    .map((ele) => {
+    .map((ele, index) => {
       let { id, title, img, price } = ele;
 
       return `
@@ -46,7 +49,7 @@ function mapProducts(products) {
             </button>
           </div>
           <div class="remove-item">
-            <button type="button" title="remove to cart">
+            <button type="button" title="remove to cart" class="btn-remove" data-id="${id}" data-index="${index}">
               Remove to cart
             </button>
           </div>
@@ -79,6 +82,16 @@ function mapProducts(products) {
     let productId = +ele.getAttribute("data-id");
     changeQuantity(productId);
   });
+
+  let btnsRemove = document.querySelectorAll(".btn-remove");
+  btnsRemove.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      let productId = +btn.getAttribute("data-id");
+      let productIndex = +btn.getAttribute("data-index");
+      removeProduct(productIndex);
+      cartCount();
+    });
+  });
 }
 
-export { handleProductsInShoppingCart };
+export { handleProductsInShoppingCart, mapProducts };
