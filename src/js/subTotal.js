@@ -1,4 +1,4 @@
-function subTotal() {
+function subtotal() {
   let Data = JSON.parse(localStorage.getItem("products")) || [];
   let subTotal = document.querySelector(".subtotal p");
   let sub = 0;
@@ -10,4 +10,4 @@ function subTotal() {
   subTotal.innerHTML = `$${sub}.0`;
 }
 
-export { subTotal };
+export { subtotal };
