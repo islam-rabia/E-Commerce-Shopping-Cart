@@ -198,6 +198,7 @@ main {
       padding-top: 10px;
       display: grid;
       gap: 16px;
+      justify-content: center;
 
       button {
         background-color: #72e29f;
@@ -209,6 +210,12 @@ main {
       p {
         font-size: 12px;
         font-family: sans-serif;
+      }
+
+      .total {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
       }
     }
   }

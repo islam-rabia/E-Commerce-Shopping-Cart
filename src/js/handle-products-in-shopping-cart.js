@@ -3,6 +3,7 @@ import { increment } from "./increment.js";
 import { decrement } from "./decrement.js";
 import { removeProduct } from "./remove-product.js";
 import { cartCount } from "./cart-count.js";
+import { orderSummary } from "./order-summary.js";
 
 function handleProductsInShoppingCart() {
   let products = JSON.parse(localStorage.getItem("products")) || [];
@@ -90,6 +91,7 @@ function mapProducts(products) {
       let productIndex = +btn.getAttribute("data-index");
       removeProduct(productIndex);
       cartCount();
+      orderSummary();
     });
   });
 }
