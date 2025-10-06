@@ -1,0 +1,203 @@
+#dishes {
+  margin-block: 20px;
+  padding-inline: 20px;
+  display: grid;
+  gap: 25px;
+
+  h1 {
+    font-size: 22px;
+    font-family: system-ui;
+    font-weight: 500;
+    color: #fd5c38;
+  }
+
+  .dishes-list {
+    list-style: none;
+    display: grid;
+    gap: 20px;
+    margin-inline: auto;
+
+    li {
+      max-width: 300px;
+
+      figure {
+        max-width: 300px;
+        position: relative;
+
+        img {
+          border-top-right-radius: 15px;
+          border-top-left-radius: 15px;
+          width: 100%;
+          height: 100%;
+        }
+
+        .increment-decrement {
+          position: absolute;
+          gap: 6px;
+          bottom: 14px;
+          right: 7px;
+          background: white;
+          height: 31px;
+          border-radius: 30px;
+          width: 80px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          .btn-increment {
+            border: hidden;
+            width: 23px;
+            height: 23px;
+            display: flex;
+            border-radius: 30px;
+            justify-content: center;
+            align-items: center;
+            background-color: #8ff196;
+            color: #07af0f;
+            cursor: pointer;
+            transition-duration: 0.6s;
+
+            &:active {
+              transform: scale(0.7);
+            }
+
+            svg {
+              width: 16px;
+            }
+          }
+
+          .btn-decrement {
+            border: hidden;
+            width: 23px;
+            height: 23px;
+            display: flex;
+            border-radius: 30px;
+            justify-content: center;
+            align-items: center;
+            background-color: #ffadad;
+            color: #e41e1e;
+            cursor: pointer;
+            transition-duration: 0.6s;
+
+            &:active {
+              transform: scale(0.7);
+            }
+
+            svg {
+              width: 16px;
+            }
+          }
+        }
+      }
+
+      .dishes-info {
+        display: grid;
+        gap: 9px;
+        border-bottom: 1px solid #e6e6e6;
+        border-left: 1px solid #e6e6e6;
+        border-right: 1px solid #e6e6e6;
+        border-bottom-right-radius: 15px;
+        border-bottom-left-radius: 15px;
+        padding-inline: 15px;
+        padding-block: 5px;
+
+        .dishes-title {
+          display: flex;
+          justify-content: space-between;
+
+          a {
+            h3 {
+              font-size: 17px;
+              font-family: system-ui;
+              font-weight: 600;
+            }
+          }
+
+          img {
+            width: 76px;
+            height: 20px;
+          }
+        }
+
+        p {
+          font-size: 15px;
+          font-family: system-ui;
+          color: #434343;
+        }
+
+        .card {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          margin-top: 12px;
+        }
+
+        span {
+          font-size: 20px;
+          font-family: system-ui;
+          font-weight: 600;
+          color: #fd5c38;
+          margin-left: auto;
+        }
+
+        .add-to-cart {
+          background-color: #fd5c38;
+          color: white;
+          border: hidden;
+          padding-block: 10px;
+          padding-inline: 14px;
+          border-radius: 7px;
+          cursor: pointer;
+          max-width: 146px;
+          transition-duration: 0.6s;
+
+          &:active {
+            transform: scale(0.7);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 640px) {
+  #dishes {
+    .dishes-list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  #dishes {
+    padding-inline: 30px;
+  }
+}
+
+@media (min-width: 992px) {
+  #dishes {
+    padding-inline: 50px;
+
+    .dishes-list {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  #dishes {
+    padding-inline: 100px;
+
+    .dishes-list {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}
+
+@media (min-width: 1400px) {
+  #dishes {
+    padding-inline: 150px;
+
+    max-width: 1400px;
+    margin-inline: auto;
+  }
+}

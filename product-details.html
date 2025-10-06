@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="src/css/style.css" />
-    <link rel="stylesheet" href="src/css/dashes.css" />
+    <link rel="stylesheet" href="src/css/product-details.css" />
     <title>Tomato App</title>
   </head>
   <body>
@@ -15,7 +15,6 @@
           <a href="./index.html">
             <h1>Tomato.</h1>
           </a>
-
           <div class="cart-icon">
             <a href="./shopping-cart.html" title="my cart">
               <i data-lucide="shopping-cart"></i>
@@ -29,20 +28,16 @@
             </div>
           </div>
         </div>
-
         <div class="search-input">
           <input type="text" placeholder="search for products..." />
           <button type="button">Search</button>
         </div>
       </div>
-
       <hr />
-
       <div class="header-navbar">
         <button type="button" title="open nav" class="open-navbar">
           <i data-lucide="chart-bar"></i>
         </button>
-
         <nav>
           <button type="button" title="close nav" class="close-navbar">
             <i data-lucide="x"></i>
@@ -54,26 +49,25 @@
             <li><a href="#">Mobile App</a></li>
           </ul>
         </nav>
-
         <div class="login">
           <button type="button">Login in</button>
         </div>
       </div>
-
       <hr />
     </header>
 
-    <section id="dishes">
-      <h1>Top dishes near you</h1>
-
-      <ul class="dishes-list"></ul>
-    </section>
+    <main>
+      <section id="product-details">
+        <h1># Welcome product details</h1>
+        <ul class="details-list"></ul>
+      </section>
+    </main>
 
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <script>
       lucide.createIcons();
     </script>
-    <script type="module" src="src/js/main.js"></script>
+    <script type="module" src="./src/js/product-details.js"></script>
   </body>
 </html>

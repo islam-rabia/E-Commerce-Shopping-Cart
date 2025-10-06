@@ -38,7 +38,7 @@ function handleDataDashes(products) {
           </figure>
           <div class="dishes-info">
             <div class="dishes-title">
-              <a href="#">
+              <a href="./product-details.html?productId=${id}">
                 <h3>${title}</h3>
               </a>
               <img src="./image/rating_starts.png" alt="" />
