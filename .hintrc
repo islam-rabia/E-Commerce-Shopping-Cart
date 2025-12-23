@@ -1,0 +1,23 @@
+{
+  "extends": ["development"],
+  "browserslist": ["defaults", "not ie 11", "not ios_saf <= 15.8"]
+}
+
+/*
+        return `
+        <li class="search-item" data-id="${id}">
+          <figure>
+            <img src="${img}" alt="${title}" />
+          </figure>
+          <div class="search-item-info">
+            <a href="./product-details.html?productId=${id}">
+              <h3>${title}</h3>
+            </a>
+            <span>Quantity: 0</span>
+            <br />
+            <span>Category: ${category}</span>
+            <p>$${price}</p>
+          </div>
+        </li>
+      `;
+*/

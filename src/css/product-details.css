@@ -27,6 +27,16 @@ main {
       padding-block: 10px;
       padding-inline: 10px;
 
+      figure {
+        max-width: 400px;
+        width: 100%;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
       .dishes-info {
         display: flex;
         flex-direction: column;
@@ -169,6 +179,16 @@ main {
           gap: 27px;
           align-items: center;
           grid-template-columns: 1fr 3fr;
+
+          figure {
+            max-width: unset;
+            width: unset;
+
+            img {
+              width: unset;
+              height: unset;
+            }
+          }
         }
       }
     }

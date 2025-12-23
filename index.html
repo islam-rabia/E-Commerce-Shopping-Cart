@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="src/css/style.css" />
     <link rel="stylesheet" href="src/css/dashes.css" />
+    <link rel="stylesheet" href="src/css/search-product.css" />
     <title>Tomato App</title>
   </head>
   <body>
@@ -67,6 +68,25 @@
       <h1>Top dishes near you</h1>
 
       <ul class="dishes-list"></ul>
+    </section>
+
+    <section id="search_product">
+      <div class="search-content">
+        <button type="button" title="close search" class="close-search">
+          <i data-lucide="x"></i>
+        </button>
+        <div class="search-info">
+          <div class="search-title">
+            <i data-lucide="search"></i>
+            <input type="text" placeholder="Search for dishes..." />
+          </div>
+
+          <div class="search-body">
+            <p>No recent searches</p>
+            <ul class="search-list"></ul>
+          </div>
+        </div>
+      </div>
     </section>
 
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
