@@ -4,20 +4,35 @@
 }
 
 /*
-        return `
-        <li class="search-item" data-id="${id}">
-          <figure>
-            <img src="${img}" alt="${title}" />
-          </figure>
-          <div class="search-item-info">
-            <a href="./product-details.html?productId=${id}">
+    return `
+      <li>
+        <figure class="relative">
+          <img src="${img}" alt="">
+          <div class="increment-decrement">
+            <button title="increment" class="btn-increment">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus-icon lucide-plus"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg>
+            </button>
+            <p id="quantity">${quantity}</p>
+            <button title="decrement" class="btn-decrement">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-minus-icon lucide-minus"><path d="M5 12h14"></path></svg>
+            </button>
+          </div>
+        </figure>
+        <div class="dishes-info">
+          <div class="dishes-title">
+            <a href="#">
               <h3>${title}</h3>
             </a>
-            <span>Quantity: 0</span>
-            <br />
-            <span>Category: ${category}</span>
-            <p>$${price}</p>
+            <img src="./image/rating_starts.png" alt="">
           </div>
-        </li>
-      `;
+          <p>${description}</p>
+          <div class="card">
+            <button class="add-to-cart" title="add to cart" data-id="12">
+              Add To Cart
+            </button>
+            <span>$${price}</span>
+          </div>
+        </div>
+      </li>
+    `;
 */

@@ -3,6 +3,7 @@ import { cartManagement } from "./cart-management.js";
 import { changeQuantity } from "./change-quantity.js";
 import { decrement } from "./decrement.js";
 import { increment } from "./increment.js";
+import { relatedProducts } from "./related-products.js";
 import { saveProductInLocalStorage } from "./saveProductInLocalStorage.js";
 
 let wishlist;
@@ -23,6 +24,7 @@ function getProductDetails(products) {
   let product = products.find((ele) => ele.id === productId);
   if (product) {
     handleProductDetails(product);
+    relatedProducts(products, productId);
   }
 }
 
