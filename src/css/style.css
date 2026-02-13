@@ -46,6 +46,17 @@ header {
         color: #fd5c38;
       }
 
+      nav {
+        display: flex;
+        gap: 26px;
+      }
+
+      .account {
+        height: 40px;
+        font-size: 15px;
+        font-family: system-ui;
+      }
+
       .cart-icon {
         display: flex;
         align-items: center;
@@ -75,8 +86,8 @@ header {
           align-items: center;
           border-radius: 10px;
           color: white;
-          right: 51px;
-          top: 0px;
+          right: -7px;
+          top: -4px;
         }
       }
     }
@@ -105,6 +116,7 @@ header {
         border: hidden;
         padding-block: 10px;
         padding-inline: 21px;
+        color: white;
         border-top-right-radius: 7px;
         border-bottom-right-radius: 7px;
       }
@@ -212,6 +224,34 @@ header {
     opacity: 1;
   }
 }
+
+.warning-message {
+  background: #f44336;
+  position: fixed;
+  bottom: 11px;
+  right: 12px;
+  color: white;
+  font-size: 16px;
+  font-family: system-ui;
+  width: 100%;
+  max-width: 300px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  transform: translateY(100%);
+  opacity: 0;
+  transition: transform 0.4s, opacity 0.4s;
+
+  &.active {
+    transform: translateY(0);
+    opacity: 1;
+    -webkit-animation: shake 0.4s ease-in-out;
+            animation: shake 0.4s ease-in-out;
+  }
+}
+
 
 /* media query */
 

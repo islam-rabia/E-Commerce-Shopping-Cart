@@ -1,21 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="src/css/style.css" />
-    <link rel="stylesheet" href="src/css/dashes.css" />
-    <link rel="stylesheet" href="src/css/search-product.css" />
-    <title>Tomato App</title>
-  </head>
-  <body>
-    <div class="section-navbar"></div>
-    <header>
-      <div class="header-info">
-        <div class="header-logo">
-          <a href="./index.html">
-            <h1>Tomato.</h1>
-          </a>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="src/css/style.css" />
+  <link rel="stylesheet" href="src/css/dashes.css" />
+  <link rel="stylesheet" href="src/css/search-product.css" />
+  <title>Tomato App</title>
+</head>
+
+<body>
+  <div class="section-navbar"></div>
+  <header>
+    <div class="header-info">
+      <div class="header-logo">
+        <a href="./index.html">
+          <h1>Tomato.</h1>
+        </a>
+
+        <nav>
+          <div class="account">
+            <p></p>
+            <span></span>
+          </div>
 
           <div class="cart-icon">
             <a href="./shopping-cart.html" title="my cart">
@@ -24,78 +32,81 @@
             <div class="count-cart">
               <p>0</p>
             </div>
-            <div class="total-cart">
-              <p>My Cart</p>
-              <span>$0.00</span>
-            </div>
           </div>
-        </div>
-
-        <div class="search-input">
-          <input type="text" placeholder="search for products..." />
-          <button type="button">Search</button>
-        </div>
-      </div>
-
-      <hr />
-
-      <div class="header-navbar">
-        <button type="button" title="open nav" class="open-navbar">
-          <i data-lucide="chart-bar"></i>
-        </button>
-
-        <nav>
-          <button type="button" title="close nav" class="close-navbar">
-            <i data-lucide="x"></i>
-          </button>
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Menu</a></li>
-            <li><a href="#">Mobile App</a></li>
-          </ul>
         </nav>
-
-        <div class="login">
-          <a href="./signUp-page.html">
-            <button type="button">Login in</button>
-          </a>
-        </div>
       </div>
 
-      <hr />
-    </header>
+      <div class="search-input">
+        <input type="text" placeholder="search for products..." />
+        <button type="button">Search</button>
+      </div>
+    </div>
 
-    <section id="dishes">
-      <h1>Top dishes near you</h1>
+    <hr />
 
-      <ul class="dishes-list"></ul>
-    </section>
+    <div class="header-navbar">
+      <button type="button" title="open nav" class="open-navbar">
+        <i data-lucide="chart-bar"></i>
+      </button>
 
-    <section id="search_product">
-      <div class="search-content">
-        <button type="button" title="close search" class="close-search">
+      <nav>
+        <button type="button" title="close nav" class="close-navbar">
           <i data-lucide="x"></i>
         </button>
-        <div class="search-info">
-          <div class="search-title">
-            <i data-lucide="search"></i>
-            <input type="text" placeholder="Search for dishes..." />
-          </div>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Menu</a></li>
+          <li><a href="#">Mobile App</a></li>
+        </ul>
+      </nav>
 
-          <div class="search-body">
-            <p>No recent searches</p>
-            <ul class="search-list"></ul>
-          </div>
+      <div class="login">
+        <a href="./sign-page.html">
+          <button type="button">Login</button>
+        </a>
+        <button class="log-out" type="button">Log out</button>
+      </div>
+    </div>
+
+    <hr />
+  </header>
+
+  <section id="dishes">
+    <h1>Top dishes near you</h1>
+
+    <ul class="dishes-list"></ul>
+  </section>
+
+  <section id="search_product">
+    <div class="search-content">
+      <button type="button" title="close search" class="close-search">
+        <i data-lucide="x"></i>
+      </button>
+      <div class="search-info">
+        <div class="search-title">
+          <i data-lucide="search"></i>
+          <input type="text" placeholder="Search for dishes..." />
+        </div>
+
+        <div class="search-body">
+          <p>No recent searches</p>
+          <ul class="search-list"></ul>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <script>
-      lucide.createIcons();
-    </script>
-    <script type="module" src="src/js/main.js"></script>
-  </body>
+  <div class="warning-message">
+    <p>Please fill in all fields</p>
+  </div>
+
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+  <script type="module" src="src/js/main.js"></script>
+</body>
+
 </html>

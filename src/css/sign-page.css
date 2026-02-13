@@ -34,17 +34,39 @@ body {
   background: rgba(19, 19, 19, 0.2);
 }
 
-#signUp-page {
-  display: flex;
-  justify-content: center;
-  max-width: 391px;
-  width: 100%;
-  background: white;
-  border-radius: 15px;
-  padding-block: 30px;
-  padding-inline: 30px;
+section {
+      display: flex;
+    gap: 10px;
+      max-width: 376px;
+    width: 100%;
+        align-items: center;
+    overflow: hidden;
+}
 
-  .form-signUp {
+#signUp-page.active {
+  transform: translateX(-100%)
+}
+#signIn-page.active {
+  transform: translateX(-385px)
+}
+
+#signUp-page,
+#signIn-page {  
+    display: flex;
+        height: -webkit-fit-content;
+        height: -moz-fit-content;
+        height: fit-content;
+    justify-content: center;
+    min-width: 376px;
+    width: 100%;
+    background: white;
+    border-radius: 15px;
+    padding-block: 30px;
+    padding-inline: 30px;
+    transition-duration: 0.4s;
+
+  .form-signUp,
+  .form-signIn {
     max-width: 325px;
     width: 100%;
 
@@ -114,8 +136,9 @@ body {
       font-family: system-ui;
       margin-top: 7px;
 
-      span a {
+      span {
         color: #fd5c38;
+        cursor: pointer;
       }
     }
   }
@@ -143,11 +166,32 @@ body {
   &.active {
     transform: translateY(0);
     opacity: 1;
-    animation: shake 0.4s ease-in-out;
+    -webkit-animation: shake 0.4s ease-in-out;
+            animation: shake 0.4s ease-in-out;
   }
 }
 
 /* Animation */
+@-webkit-keyframes shake {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+  20% {
+    transform: translateY(0) translateX(-5px);
+  }
+  40% {
+    transform: translateY(0) translateX(5px);
+  }
+  60% {
+    transform: translateY(0) translateX(-4px);
+  }
+  80% {
+    transform: translateY(0) translateX(4px);
+  }
+  100% {
+    transform: translateY(0) translateX(0);
+  }
+}
 @keyframes shake {
   0% {
     transform: translateY(0) translateX(0);

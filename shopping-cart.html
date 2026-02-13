@@ -1,20 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="src/css/style.css" />
-    <link rel="stylesheet" href="src/css/shopping-cart.css" />
-    <title>Tomato App</title>
-  </head>
-  <body>
-    <div class="section-navbar"></div>
-    <header>
-      <div class="header-info">
-        <div class="header-logo">
-          <a href="./index.html">
-            <h1>Tomato.</h1>
-          </a>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="src/css/style.css" />
+  <link rel="stylesheet" href="src/css/shopping-cart.css" />
+  <title>Tomato App</title>
+</head>
+
+<body>
+  <div class="section-navbar"></div>
+  <header>
+    <div class="header-info">
+      <div class="header-logo">
+        <a href="./index.html">
+          <h1>Tomato.</h1>
+        </a>
+
+        <nav>
+          <div class="account">
+            <p></p>
+            <span></span>
+          </div>
 
           <div class="cart-icon">
             <a href="./shopping-cart.html" title="my cart">
@@ -23,90 +31,91 @@
             <div class="count-cart">
               <p>0</p>
             </div>
-            <div class="total-cart">
-              <p>My Cart</p>
-              <span>$0.00</span>
-            </div>
           </div>
-        </div>
-
-        <div class="search-input">
-          <input type="text" placeholder="search for products..." />
-          <button type="button">Search</button>
-        </div>
-      </div>
-
-      <hr />
-
-      <div class="header-navbar">
-        <button type="button" title="open nav" class="open-navbar">
-          <i data-lucide="chart-bar"></i>
-        </button>
-
-        <nav>
-          <button type="button" title="close nav" class="close-navbar">
-            <i data-lucide="x"></i>
-          </button>
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Menu</a></li>
-            <li><a href="#">Mobile App</a></li>
-          </ul>
         </nav>
-
-        <div class="login">
-          <button type="button">Login in</button>
-        </div>
       </div>
 
-      <hr />
-    </header>
+      <div class="search-input">
+        <input type="text" placeholder="search for products..." />
+        <button type="button">Search</button>
+      </div>
+    </div>
 
-    <main>
-      <section id="shopping-cart">
-        <h1># Welcome shopping cart</h1>
-        <div class="cart-details">
-          <h3>My Cart <span class="products-length">(0)</span></h3>
-        </div>
-        <ul class="cart-list"></ul>
-      </section>
+    <hr />
 
-      <section id="order-summary">
-        <h2>Order Summary</h2>
-        <ul class="order-list">
-          <li class="subtotal">
-            <h3>Subtotal</h3>
-            <p>$00.0</p>
-          </li>
+    <div class="header-navbar">
+      <button type="button" title="open nav" class="open-navbar">
+        <i data-lucide="chart-bar"></i>
+      </button>
 
-          <li class="discount">
-            <h3>Discounts</h3>
-            <p>10%</p>
-          </li>
-
-          <li class="delivery-free">
-            <h3>Delivery Free</h3>
-            <p>$15.0</p>
-          </li>
-
-          <li class="checkout-total">
-            <div class="total">
-              <h3>Total</h3>
-              <p>$00.0</p>
-            </div>
-            <button type="button" title="checkout">Secure Checkout</button>
-            <p>Gift cards and promo codes are applied in at checkout.</p>
-          </li>
+      <nav>
+        <button type="button" title="close nav" class="close-navbar">
+          <i data-lucide="x"></i>
+        </button>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Menu</a></li>
+          <li><a href="#">Mobile App</a></li>
         </ul>
-      </section>
-    </main>
+      </nav>
 
-    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <script>
-      lucide.createIcons();
-    </script>
-    <script type="module" src="src/js/shopping-cart.js"></script>
-  </body>
+      <div class="login">
+        <a href="./sign-page.html">
+          <button type="button">Login</button>
+        </a>
+        <button class="log-out" type="button">Log out</button>
+      </div>
+    </div>
+
+    <hr />
+  </header>
+
+  <main>
+    <section id="shopping-cart">
+      <h1># Welcome shopping cart</h1>
+      <div class="cart-details">
+        <h3>My Cart <span class="products-length">(0)</span></h3>
+      </div>
+      <ul class="cart-list"></ul>
+    </section>
+
+    <section id="order-summary">
+      <h2>Order Summary</h2>
+      <ul class="order-list">
+        <li class="subtotal">
+          <h3>Subtotal</h3>
+          <p>$00.0</p>
+        </li>
+
+        <li class="discount">
+          <h3>Discounts</h3>
+          <p>10%</p>
+        </li>
+
+        <li class="delivery-free">
+          <h3>Delivery Free</h3>
+          <p>$15.0</p>
+        </li>
+
+        <li class="checkout-total">
+          <div class="total">
+            <h3>Total</h3>
+            <p>$00.0</p>
+          </div>
+          <button type="button" title="checkout">Secure Checkout</button>
+          <p>Gift cards and promo codes are applied in at checkout.</p>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+  <script type="module" src="src/js/shopping-cart.js"></script>
+</body>
+
 </html>

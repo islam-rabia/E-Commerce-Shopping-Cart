@@ -1,20 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="src/css/style.css" />
-    <link rel="stylesheet" href="src/css/product-details.css" />
-    <title>Tomato App</title>
-  </head>
-  <body>
-    <div class="section-navbar"></div>
-    <header>
-      <div class="header-info">
-        <div class="header-logo">
-          <a href="./index.html">
-            <h1>Tomato.</h1>
-          </a>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="src/css/style.css" />
+  <link rel="stylesheet" href="src/css/product-details.css" />
+  <title>Tomato App</title>
+</head>
+
+<body>
+  <div class="section-navbar"></div>
+  <header>
+    <div class="header-info">
+      <div class="header-logo">
+        <a href="./index.html">
+          <h1>Tomato.</h1>
+        </a>
+        <nav>
+          <div class="account">
+            <p></p>
+            <span></span>
+          </div>
+
           <div class="cart-icon">
             <a href="./shopping-cart.html" title="my cart">
               <i data-lucide="shopping-cart"></i>
@@ -22,57 +30,62 @@
             <div class="count-cart">
               <p>0</p>
             </div>
-            <div class="total-cart">
-              <p>My Cart</p>
-              <span>$0.00</span>
-            </div>
           </div>
-        </div>
-        <div class="search-input">
-          <input type="text" placeholder="search for products..." />
-          <button type="button">Search</button>
-        </div>
-      </div>
-      <hr />
-      <div class="header-navbar">
-        <button type="button" title="open nav" class="open-navbar">
-          <i data-lucide="chart-bar"></i>
-        </button>
-        <nav>
-          <button type="button" title="close nav" class="close-navbar">
-            <i data-lucide="x"></i>
-          </button>
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Menu</a></li>
-            <li><a href="#">Mobile App</a></li>
-          </ul>
         </nav>
-        <div class="login">
-          <button type="button">Login in</button>
-        </div>
       </div>
-      <hr />
-    </header>
+      <div class="search-input">
+        <input type="text" placeholder="search for products..." />
+        <button type="button">Search</button>
+      </div>
+    </div>
+    <hr />
+    <div class="header-navbar">
+      <button type="button" title="open nav" class="open-navbar">
+        <i data-lucide="chart-bar"></i>
+      </button>
+      <nav>
+        <button type="button" title="close nav" class="close-navbar">
+          <i data-lucide="x"></i>
+        </button>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Menu</a></li>
+          <li><a href="#">Mobile App</a></li>
+        </ul>
+      </nav>
+      <div class="login">
+        <a href="./sign-page.html">
+          <button type="button">Login</button>
+        </a>
+        <button class="log-out" type="button">Log out</button>
+      </div>
+    </div>
+    <hr />
+  </header>
 
-    <main>
-      <section id="product-details">
-        <h1># Welcome product details</h1>
-        <ul class="details-list"></ul>
-      </section>
+  <main>
+    <section id="product-details">
+      <h1># Welcome product details</h1>
+      <ul class="details-list"></ul>
+    </section>
 
-      <section id="related-products">
-        <h2>Top dishes near you</h2>
-        <ul class="related-list"></ul>
-      </section>
-    </main>
+    <section id="related-products">
+      <h2>Top dishes near you</h2>
+      <ul class="related-list"></ul>
+    </section>
+  </main>
 
-    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <script>
-      lucide.createIcons();
-    </script>
-    <script type="module" src="./src/js/product-details.js"></script>
-  </body>
+  <div class="warning-message">
+    <p>Please fill in all fields</p>
+  </div>
+
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+  <script type="module" src="./src/js/product-details.js"></script>
+</body>
+
 </html>

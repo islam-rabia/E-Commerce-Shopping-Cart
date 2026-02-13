@@ -29,6 +29,7 @@ function getProductDetails(products) {
 }
 
 let app = document.querySelector(".details-list");
+let warningMessage = document.querySelector(".warning-message");
 
 function handleProductDetails(product) {
   let { id, title, img, price, category } = product;
@@ -69,11 +70,21 @@ function handleProductDetails(product) {
     if (btn) {
       let productId = +btn.getAttribute("data-id");
       // condition ? true : false
-      let product = wishlist.find((ele) => ele.id === productId);
-      saveProductInLocalStorage(product);
-      cartManagement(product, productId);
-      changeQuantity(productId);
-      cartCount();
+
+      let account = JSON.parse(localStorage.getItem("account")) || [];
+
+      if (account.length == 0) {
+        warningMessage.classList.add("active");
+        warningMessage.innerHTML = `<p>Please sign up to add cart</p>`;
+        setTimeout(() => {
+          warningMessage.classList.remove("active");
+        }, 1500);
+      } else {
+        saveProductInLocalStorage(wishlist, productId);
+        cartManagement(wishlist, productId);
+        changeQuantity(productId);
+        cartCount();
+      }
     }
   });
 

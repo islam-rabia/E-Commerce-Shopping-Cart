@@ -17,6 +17,7 @@ async function fetchDataDashes() {
 }
 
 let app = document.querySelector(".dishes-list");
+let warningMessage = document.querySelector(".warning-message");
 function handleDataDashes(products) {
   app.innerHTML = products
     .map((item) => {
@@ -63,11 +64,20 @@ function handleDataDashes(products) {
     if (btn) {
       let productId = +btn.getAttribute("data-id");
       // condition ? true : false
-      let product = wishlist.find((ele) => ele.id === productId);
-      saveProductInLocalStorage(product);
-      cartManagement(product, productId);
-      changeQuantity(productId);
-      cartCount();
+      let account = JSON.parse(localStorage.getItem("account")) || [];
+
+      if (account.length == 0) {
+        warningMessage.classList.add("active");
+        warningMessage.innerHTML = `<p>Please sign up to add cart</p>`;
+        setTimeout(() => {
+          warningMessage.classList.remove("active");
+        }, 1500);
+      } else {
+        saveProductInLocalStorage(products, productId);
+        cartManagement(products, productId);
+        changeQuantity(productId);
+        cartCount();
+      }
     }
   });
 

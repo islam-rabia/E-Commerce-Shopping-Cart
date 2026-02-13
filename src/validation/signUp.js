@@ -1,10 +1,12 @@
 function signUp() {
+  let signUpPage = document.getElementById("signUp-page");
+  let signInPage = document.getElementById("signIn-page");
   let formSignUp = document.querySelector(".form-signUp");
+  let submit = formSignUp.querySelector(".submit");
   let firstName = formSignUp.querySelector(".firstName");
   let lastName = formSignUp.querySelector(".lastName");
   let email = formSignUp.querySelector(".email");
   let password = formSignUp.querySelector(".password");
-  let submit = formSignUp.querySelector(".submit");
   let warningMessage = document.querySelector(".warning-message");
 
   submit.addEventListener("click", (e) => {
@@ -17,9 +19,11 @@ function signUp() {
       password.value !== ""
     ) {
       registerAccount(firstName, lastName, email, password);
-      setTimeout(() => {
-        location.href = "./signIn-page.html";
-      }, 1500);
+      formSignUp.reset();
+      console.log("hello");
+
+      signInPage.classList.add("active");
+      signUpPage.classList.add("active");
     } else {
       warningMessage.classList.add("active");
       setTimeout(() => {
@@ -34,7 +38,7 @@ function registerAccount(firstName, lastName, email, password) {
     firstName: firstName.value,
     lastName: lastName.value,
     email: email.value,
-    password: password.value
+    password: password.value,
   };
 
   saveInLocalStorage(account);
@@ -44,4 +48,4 @@ function saveInLocalStorage(data) {
   localStorage.setItem("account", JSON.stringify(data));
 }
 
-signUp();
+export { signUp };

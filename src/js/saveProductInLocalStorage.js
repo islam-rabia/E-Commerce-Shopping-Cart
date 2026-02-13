@@ -1,8 +1,11 @@
-let wishList = JSON.parse(localStorage.getItem("products")) || [];
+function saveProductInLocalStorage(products, productId) {
+  let wishList = JSON.parse(localStorage.getItem("products")) || [];
+  let findProduct = products.find((ele) => ele.id === productId);
 
-function saveProductInLocalStorage(product) {
-  wishList.push(product);
-  localStorage.setItem("products", JSON.stringify(wishList));
+  if (findProduct) {
+    localStorage.setItem("products", JSON.stringify(wishList));
+    wishList.push(findProduct);
+  }
 }
 
 export { saveProductInLocalStorage };

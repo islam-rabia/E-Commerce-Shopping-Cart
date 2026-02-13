@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="src/css/sign-page.css" />
+  <title>SignUp Page</title>
+</head>
+
+<body>
+  <main class="section-sign-page overlay">
+    <section>
+      <div id="signUp-page">
+        <form action="" class="form-signUp">
+          <div class="logo-form">
+            <h3>Welcome to Sign Up</h3>
+          </div>
+          <div class="inputs-form">
+            <div class="firstName-input">
+              <label for="firstName">firstName:</label>
+              <input id="firstName" class="firstName" type="text" placeholder="Enter the firstName" name="firstName"
+                autocomplete="given-name" />
+            </div>
+            <div class="lastName-input">
+              <label for="lastName">lastName:</label>
+              <input id="lastName" class="lastName" type="text" placeholder="Enter the lastName" name="lastName"
+                autocomplete="family-name"
+                class="rounded-[8px] text-[#4e4d4d] border-[1px] border-[#9b9b9b78] border-solid py-[4px] px-[5px] text-[15px]" />
+            </div>
+            <div class="email-input">
+              <label for="email">Email:</label>
+              <input id="email" class="email" type="text" placeholder="Enter the email" name="email"
+                autocomplete="email" />
+            </div>
+            <div class="password-input">
+              <label for="password">Password:</label>
+              <input id="password" class="password" type="password" placeholder="Enter the password" name="password"
+                autocomplete="new-password" />
+            </div>
+          </div>
+          <button type="submit" class="submit">Create account</button>
+          <p class="message-form">
+            Already have an account?
+            <span class="message-signIn">signIn here</span>
+          </p>
+        </form>
+      </div>
+
+      <div id="signIn-page">
+        <form action="" class="form-signIn">
+          <div class="logo-form">
+            <h3>Welcome to Sign In</h3>
+          </div>
+          <div class="inputs-form">
+            <div class="email-input">
+              <label for="email-signIn">Email:</label>
+              <input id="email-signIn" class="email-signIn" type="text" placeholder="Enter the email" name="email"
+                autocomplete="email" />
+            </div>
+            <div class="password-input">
+              <label for="email-signIn">Password:</label>
+              <input id="password-signIn" class="password-signIn" type="password" placeholder="Enter the password"
+                name="password" autocomplete="new-password" />
+            </div>
+          </div>
+          <button type="submit" class="submit">Sign In</button>
+          <p class="message-form">
+            Don’t have an account?
+            <span class="message-signUp">Sign up here</span>
+          </p>
+
+        </form>
+      </div>
+    </section>
+
+
+  </main>
+
+  <div class="warning-message">
+    <p>Please fill in all fields</p>
+  </div>
+
+  <script type="module" src="./src/validation/sign-page.js"></script>
+</body>
+
+</html>
